@@ -1,0 +1,21 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+
+<div class="wrapper-to-do">
+    <div class="container-to-do">
+        <div class="to-do-header">
+            <h1>UPDATE TASK</h1>
+        </div>
+        <div class="">
+            <form method="POST" action="" class="">
+                {% csrf_token %}
+                {{ form }}
+                <div>
+                    <input type="submit" name="Update Task" class="btn btn-dark btn-outline-primary mt-3">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

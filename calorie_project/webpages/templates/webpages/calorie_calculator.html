@@ -1,0 +1,42 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+<body>
+  <div class="container-base container-bfp">
+    <h1>CALORIE CALCULATOR</h1>
+    <p>How many calories should you eat ot lose weight</p>
+    <table class="table">
+      <tr>
+        <form action="">
+          <td><label>Gender</label></td>
+          <td><input type="radio" name="gender" value="male" id="m"> Male</td>
+          <td><input type="radio" name="gender" value="female" id="f"> Female</td>
+        </form>
+      </tr>
+      <tr>
+        <td><label>Age</label></td>
+        <td><input type="number" id="age" placeholder="Enter you're age"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><label>Weight</label></td>
+        <td><input type="number" id="we" placeholder="Enter you're weight"></td>
+      </tr>
+      <tr>
+        <td><label>Height</label></td>
+        <td><input type="number" id="h-ft" placeholder="Enter you're height (ft)"></td>
+        <td><input type="number" id="h-in" placeholder="Enter you're height (in)"></td>
+      </tr>
+      <tr>
+        <td><label>ACTIVITY PER WEEK</label></td>
+        <td><input type="number" id="activ" placeholder="Enter how many days you workout a week"></td>
+      </tr>
+      <tr>
+        <td><label>CALORIE CALCULATOR</label></td>
+        <td><button class="btn btn-secondary" id="button-res" onClick="Calorie()">Calculate</button></td>
+        <td><p class="result-bfp result btn" id="result"></p></td>
+      </tr>
+    </table>
+    </div>
+</body>
+{% endblock %}
+

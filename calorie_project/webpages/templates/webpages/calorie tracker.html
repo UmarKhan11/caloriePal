@@ -1,0 +1,48 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+
+<div class="wrapper wrapper-calorie-tracker">
+    <div class="wrapper-flex-cal-trac">
+        <div class="add-item-flex">
+            <h1>CALORIE TRACKER</h1>
+        </div>
+        <div class="add-item-flex">
+            <p>ITEM</p>
+            <p>CALORIES</p>
+        </div>
+        <div class="add-item-flex">
+            <input type="text" placeholder="item" id="item" name="item">
+            <input type="text" placeholder="calories" id="cal" name="cal">
+        </div>
+        <div class="add-item-flex">
+            <button class="btn btn-dark btn-outline-success" onclick="addRow();" >ADD MEAL</button>
+        </div>
+    </div>
+    <div class="wrapper-flex-cal-trac">
+        <div class="log-item-flex">
+            <h1>ITEM LOG</h1>
+        </div>
+        <div class="log-item-flex">
+            <p>Press the "ADD MEAL" button to add a meal to you're log</p>
+        </div>
+        <div class="log-item-flex">
+            <div class="log-item-flex">
+                <h4 class="mt-2 mr-3">TOTAL CAL</h4>
+                <p class="result-bfp" id="result"></p>
+            </div>
+        </div>
+        <div class="log-item-flex">
+            <table class="table table-custom" id="log-table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">buttons</th>
+                        <th scope="col">MEAL</th>
+                        <th scope="col">CALORIES</th>
+                        <th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,345 @@
+@import url('http://fonts.googleapis.com/css?family-Raleway:300, 400');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+@import url('https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700'>);
+
+* {
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: scroll;
+}
+
+body {
+    background-image: url("../images/dumbbell bg.jpg");
+    background-color: black;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    margin-top: 20px;
+}
+
+/* navigation bar webpage layout base */
+
+.nav-custom {
+    background-color: #202020;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: #202020;
+}
+
+.navbar-nav > li > .dropdown-menu a {
+   color: white;
+}
+
+.navbar-nav > li > .dropdown-menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: black;
+    color: white;
+}
+
+/* homepage */
+
+.container-base {
+    margin: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    border: 3px solid #f1f1f1;
+    color: white;
+    padding: 30px;
+}
+
+.container-homepage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* forum */
+
+.wrapper-forum {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 1 px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    border: 3px solid #f1f1f1;
+    padding: 2%;
+    width: 900px;
+    margin: 20px auto;
+}
+
+.wrapper-pag {
+    display: flex;
+    text-align: center;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    border-radius: 12px;
+}
+
+.pag-btn {
+    background-color: black;
+}
+
+
+.blog-content {
+    width: 900px;
+    margin-top: 10px;
+    margin: 20px auto;
+}
+
+.profile-dim {
+    margin: 10px 10px 10px 10px;
+}
+
+.profile-dim img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.wrapper-post {
+    margin-left: 15px;
+    padding-left: 10px;
+    background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+
+}
+
+.wrapper-post a {
+    color: white;
+    text-decoration: none;
+}
+
+.article-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.wrapper-post p {
+    font-size: 14px;
+}
+
+.wrapper-create-post {
+    top: 55%;
+    left: 50%;
+    width: 600px;
+}
+
+.new-post-box {
+    color: white;
+}
+
+/* calorie tracker */
+
+.wrapper-calorie-tracker {
+    padding-bottom: 300px;
+    margin:0 auto;
+    position: relative;
+    width: 960px;
+}
+
+.wrapper-flex-cal-trac {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    border: 3px solid #f1f1f1;
+    padding: 2%;
+}
+
+.add-item-flex {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.log-item-flex {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.table-custom {
+    margin: 13px auto;
+    text-align: center;
+}
+
+/* to-do */
+
+.wrapper-to-do {
+    padding-bottom: 300px;
+    margin:0 auto;
+    position: relative;
+    width: 960px;
+}
+
+.container-to-do {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    border: 3px solid #f1f1f1;
+    padding: 2%;
+}
+
+.add-task-box {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.task-log-box {
+    display: flex;
+    justify-content: space-around;
+    background-color: #202020;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 2%;
+    margin-bottom: 4px;
+}
+
+.confirm-delete-task-flex {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/* body fat percentage calculator */
+
+.container-bfp {
+    text-align: center;
+    margin-top: 50px;
+    width: 1000px;
+    top: 60%;
+}
+
+.wrapper-calc-table {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 1 px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.7);
+    border: 3px solid #f1f1f1;
+    padding: 2%;
+    width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.wrapper-calc-table .axis-title {
+    font-weight: bold;
+}
+
+
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+
+input[type=text] {
+    width=50%;
+}
+
+input[type=number] {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    border-radius: 12px;
+    border-style: solid;
+}
+
+input[type=text] {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    border-radius: 12px;
+    border-style: solid;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]::placeholder {
+    color: white;
+    padding-left: 8px;
+}
+
+input[type=text]::placeholder {
+    color: white;
+    padding-left: 8px;
+}
+
+.result-bfp {
+    background-color: rgba(0,0,0, 0.4);
+    border: none;
+    color: white;
+    padding: 25px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 12px;
+    border: solid;
+    border-color: #777;
+}
+
+/* account */
+
+.container-login {
+    text-align: center;
+    margin-top: 70px;
+    width: 50%;
+    top: 50%;
+}
+
+.container-profile {
+    text-align: center;
+    width: 700px;
+}
+
+.container-new-post {
+    text-align: center;
+}
+
+.wrapper-register {
+    margin-bottom: 40px;
+    width: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.wrapper-profile {
+    margin-top: 570px;
+    padding-bottom: 40px;
+    left: 50%;
+    width: 700px;
+}

@@ -1,0 +1,64 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+<body>
+    <div class="wrapper-calc-table mt-4">
+      <h1>BMI TABLE FOR ADULTS</h1>
+      <table class="table">
+        <tr class="axis-title">
+          <td>Categories</td>
+          <td>Severe Thinness</td>
+          <td>Moderate Thinness</td>
+          <td>Mild Thinness</td>
+          <td>Normal</td>
+          <td>Overweight</td>
+          <td>Obese Class |</td>
+          <td>Obese Class ||</td>
+          <td>Obese Class |||</td>
+        </tr>
+        <tr>
+          <td class="axis-title">BMI RANGE (kg/m^2)</td>
+          <td>< 16</td>
+          <td>16 - 17</td>
+          <td>17 - 18.5</td>
+          <td>18 - 25</td>
+          <td>25 - 30</td>
+          <td>30 - 35</td>
+          <td>35 - 40</td>
+          <td>< 40</td>
+        </tr>
+      </table>
+    </div>
+  <div class="container-base container-bfp mb-4">
+    <h1>BODY MASS INDEX</h1>
+    <table class="table">
+      <tr>
+        <form action="">
+          <td><label>Gender</label></td>
+          <td><input type="radio" name="gender" value="male" id="m"> Male</td>
+          <td><input type="radio" name="gender" value="female" id="f"> Female</td>
+        </form>
+      </tr>
+      <tr>
+        <td><label>Age</label></td>
+        <td><input type="number" id="age" placeholder="Enter you're age"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><label>Weight</label></td>
+        <td><input type="number" id="we" placeholder="Enter you're weight"></td>
+      </tr>
+      <tr>
+        <td><label>Height</label></td>
+        <td><input type="number" id="h-ft" placeholder="Enter you're height (ft)"></td>
+        <td><input type="number" id="h-in" placeholder="Enter you're height (in)"></td>
+      </tr>
+      <tr>
+        <td><label>BODY MASS INDEX</label></td>
+        <td><button class="btn btn-secondary" id="button-res" onClick="BodyMassIndex()">Calculate</button></td>
+        <td><p class="result-bfp result btn" id="result"></p></td>
+      </tr>
+    </table>
+    </div>
+</body>
+{% endblock %}
+

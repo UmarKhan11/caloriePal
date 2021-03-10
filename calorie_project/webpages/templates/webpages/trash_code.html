@@ -1,0 +1,416 @@
+<!-- base -->
+  <!--
+
+      <div class="nav-bar">
+        <ul>
+          <div class="nav-no-user">
+            <li class="active active-color"><a href="{% url 'home-page' %}">HOME</a></li>
+            <li><a class="text-decoration-none" href="{% url 'calorie-tracker' %}">CALORIE TRACKER</a></li>
+            <li><a class="text-decoration-none" href="{% url 'forum' %}">FORUM</a></li>
+            <li><a class="text-decoration-none" href="{% url 'body-fat-percentage' %}">BODY FAT PERCENTAGE</a></li>
+          </div>
+
+          <div class="nav-user" style="float:right">
+              {% if user.is_authenticated %}
+                <li><a class="text-decoration-none" href="{% url 'to-do' %}">TO DO</a></li>
+                <li><a class="text-decoration-none" href="{% url 'logout' %}">LOGOUT</a></li>
+                <li><a class="text-decoration-none" href="{% url 'profile' %}">PROFILE</a></li>
+                <li><a class="text-decoration-none" href="{% url 'forum-create' %}">NEW POST</a></li>
+              {% else %}
+                <li><a class="text-decoration-none" href="{% url 'login' %}">LOGIN</a></li>
+                <li><a class="text-decoration-none" href="{% url 'register' %}">REGISTER</a></li>
+              {% endif %}
+          </div>
+
+        </ul>
+      </div>
+
+      -->
+  <!--
+      <div class="nav-bar">
+        <div class="nav-no-user">
+          <ul>
+            <li class="active active-color"><a href="{% url 'home-page' %}">HOME</a></li>
+            <li><a class="text-decoration-none" href="{% url 'calorie-tracker' %}">CALORIE TRACKER</a></li>
+            <li><a class="text-decoration-none" href="{% url 'body-fat-percentage' %}">BODY FAT PERCENTAGE</a></li>
+            <li><a class="text-decoration-none" href="{% url 'forum' %}">FORUM</a></li>
+
+          <div class="nav-user">
+            {% if user.is_authenticated %}
+              <li><a class="text-decoration-none" href="{% url 'to-do' %}">TO DO</a></li>
+              <li><a class="text-decoration-none" href="{% url 'logout' %}">LOGOUT</a></li>
+              <li><a class="text-decoration-none" href="{% url 'profile' %}">PROFILE</a></li>
+              <li><a class="text-decoration-none" href="{% url 'forum-create' %}">NEW POST</a></li>
+            {% else %}
+              <li><a class="text-decoration-none" href="{% url 'login' %}">LOGIN</a></li>
+              <li><a class="text-decoration-none" href="{% url 'register' %}">REGISTER</a></li>
+            {% endif %}
+          </div>
+        </ul>
+      </div>
+        <!--
+
+      <div class="nav-bar">
+        <ul>
+          <div class="nav-no-user">
+            <li class="active active-color"><a href="{% url 'home-page' %}">HOME</a></li>
+            <li><a class="text-decoration-none" href="{% url 'calorie-tracker' %}">CALORIE TRACKER</a></li>
+            <li><a class="text-decoration-none" href="{% url 'forum' %}">FORUM</a></li>
+            <li><a class="text-decoration-none" href="{% url 'body-fat-percentage' %}">BODY FAT PERCENTAGE</a></li>
+          </div>
+
+          <div class="nav-user" style="float:right">
+              {% if user.is_authenticated %}
+                <li><a class="text-decoration-none" href="{% url 'to-do' %}">TO DO</a></li>
+                <li><a class="text-decoration-none" href="{% url 'logout' %}">LOGOUT</a></li>
+                <li><a class="text-decoration-none" href="{% url 'profile' %}">PROFILE</a></li>
+                <li><a class="text-decoration-none" href="{% url 'forum-create' %}">NEW POST</a></li>
+              {% else %}
+                <li><a class="text-decoration-none" href="{% url 'login' %}">LOGIN</a></li>
+                <li><a class="text-decoration-none" href="{% url 'register' %}">REGISTER</a></li>
+              {% endif %}
+          </div>
+
+        </ul>
+      </div>
+
+      -->
+  <!--
+      <div class="nav-bar">
+        <div class="nav-no-user">
+          <ul>
+            <li class="active active-color"><a href="{% url 'home-page' %}">HOME</a></li>
+            <li><a class="text-decoration-none" href="{% url 'calorie-tracker' %}">CALORIE TRACKER</a></li>
+            <li><a class="text-decoration-none" href="{% url 'body-fat-percentage' %}">BODY FAT PERCENTAGE</a></li>
+            <li><a class="text-decoration-none" href="{% url 'forum' %}">FORUM</a></li>
+
+          <div class="nav-user">
+            {% if user.is_authenticated %}
+              <li><a class="text-decoration-none" href="{% url 'to-do' %}">TO DO</a></li>
+              <li><a class="text-decoration-none" href="{% url 'logout' %}">LOGOUT</a></li>
+              <li><a class="text-decoration-none" href="{% url 'profile' %}">PROFILE</a></li>
+              <li><a class="text-decoration-none" href="{% url 'forum-create' %}">NEW POST</a></li>
+            {% else %}
+              <li><a class="text-decoration-none" href="{% url 'login' %}">LOGIN</a></li>
+              <li><a class="text-decoration-none" href="{% url 'register' %}">REGISTER</a></li>
+            {% endif %}
+          </div>
+        </ul>
+      </div>
+-->
+
+<!-- calorie tracjer -->
+<!--
+<!-- GOOD
+<div class="wrapper-calorie-tracker">
+    <div class="container-calorie-tracker">
+
+        <div class="add-item-box">
+            <div class="title">
+                <h1>CALORIE TRACKER</h1>
+            </div>
+            <div class="label-1">
+                <p>ITEM</p>
+                <input type="text" placeholder="item" id="item" name="item">
+            </div>
+            <div class="label-2">
+                <p>CALORIES</p>
+                <input type="text" placeholder="calories" id="cal" name="cal">
+            </div>
+            <div class="add-meal">
+                <button class="btn btn-dark btn-outline-success" onclick="addRow();" >ADD MEAL</button>
+            </div>
+        </div>
+
+        <div class="log-item-box">
+
+            <div class="log-item-header">
+                <h1>ITEM LOG</h1>
+                <p>Press the "ADD MEAL" button to add a meal to you're log</p>
+            </div>
+
+            <div class="log-item-row">
+                <div>
+                    <h4 class="mr-3">TOTAL CAL</h4>
+                    <p class="result-bfp" id="result">
+                </div>
+
+                <div>
+                    <button class="btn btn-dark btn-outline-danger">CLEAR ALL</button>
+                </div>
+            </div>
+
+
+
+            <div class="box-table">
+                <table class="table axis custom-table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">MEAL</th>
+                      <th scope="col">CALORIES</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+            </div>
+            </div>
+            </div>
+
+            -->
+
+
+            <!--
+ First Name: <input type="text" name="fname" id="fname" /><br/><br/>
+        Last Name: <input type="text" name="lname" id="lname" /><br/><br/>
+        Age: <input type="text" name="age" id="age" /><br/><br/>
+        <button onclick="addRow();">Add Row</button><br/><br/>
+
+        <table border="1">
+
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+
+            <tr>
+                <td>AAAAAA</td>
+                <td>BBBBBB</td>
+            </tr>
+
+             <tr>
+                <td>CCC</td>
+                <td>DDDD</td>
+            </tr>
+
+             <tr>
+                <td>EEE</td>
+                <td>FFFFF</td>
+            </tr>
+
+             <tr>
+                <td>GGGGG</td>
+                <td>HHHH</td>
+            </tr>
+
+             <tr>
+                <td>MMMMMM</td>
+                <td>NNNN</td>
+            </tr>
+
+        </table>
+        -->
+
+<!--
+<div class="wrapper-calorie-tracker">
+
+    <div class="container-calorie-tracker">
+
+        <div class="box-box">
+
+            <div class="box-layout">
+                <h1>ADD ITEM</h1>
+            </div>
+
+            <div class="box-layout">
+
+                <div class="">
+                    <input type="text" placeholder="item" id="item">
+                </div>
+
+                <div class="">
+                    <input type="text" placeholder="cal" id="cal">
+                </div>
+
+            </div>
+
+            <div class="box-layout">
+
+                <div class="btn btn-primary ">
+                    <button onclick="addHtmlTableRow();" >ADD MEAL</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box-box">
+
+            <div class="box-layout">
+                <h1>ITEM LOG</h1>
+            </div>
+
+            <div class="box-layout">
+
+                <div class="">
+                    <h4>TOTAL CAL </h4>
+                    <p class="result-bfp" id="result">
+                </div>
+
+                <div class="">
+                    <button class="btn btn-danger">CLEAR ALL</button>
+                </div>
+
+            </div>
+
+            <div class="box-table">
+                <table class="table" id="table">
+                    <tr>
+                        <th>MEAL</th>
+                        <th>CALORIES</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+-->
+
+<!--
+<div class="wrapper-calorie-tracker">
+    <div class="container-calorie-tracker">
+
+        <div class="add-item-box">
+            <div class="box-title">
+                <h1>ADD ITEM</h1>
+            </div>
+            <div class="box-box">
+                <div class="">
+                    <label>Item <input type="text" placeholder="item"></label>
+                </div>
+                <div class="">
+                    <label>Calories <input type="text" placeholder="cal"></label>
+                </div>
+            </div>
+            <div class="box-box">
+                <div class="btn btn-primary ">
+                    <submit >ADD MEAL</submit>
+                </div>
+            </div>
+        </div>
+
+        <div class="log-item-box">
+
+            <div class="box-title">
+                <h1>ITEM LOG</h1>
+            </div>
+
+            <div class="box-box">
+                <div class="">
+                    <h4>TOTAL CALORIES</h4></p>
+                </div>
+                <div class="">
+                    <p class="result-bfp" id="result">
+                </div>
+                <div class="">
+                    <button class="btn btn-danger">CLEAR ALL</button>
+                </div>
+            </div>
+
+            <div class="box-table">
+                <table CLASS="table">
+                    <tr>
+                        <th>MEAL</th>
+                        <th>CALORIES</th>
+                    </tr>
+                    <tr>
+                        <th>Test::MEAL</th>
+                        <th>Test::CALORIES</th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+-->
+<!--
+    <div class="cal-trac-head">
+        <h1>CALORIE TRACKER</h1>
+    </div>
+
+    <div class="cal-trac-wrapper">
+        <p>Press the "ADD MEAL" button to add a meal to you're log</p>
+        <div class="cal-trac-cont-1">
+            <input type="text" id="meal-name" placeholder="Enter meal">
+            <input type="number" id="cal" placeholder="Enter calories">
+            <button onclick="addRow();" class="btn">ADD MEAL</button>
+        </div>
+    </div>
+
+    <div class="cal-trac-wrapper">
+        <h1>TOTAL CALORIES:</h1>
+        <table CLASS="table">
+            <tr>
+                <th>MEAL</th>
+                <th>CALORIES</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+
+        </table>
+    </div>
+
+    <script>
+
+        function addRow() {
+            let mealName = document.getElementById('meal-name').value;
+            let calories = document.getElementById('cal').value;
+
+            let table = document.getElementByTagName('table')[0];
+
+            let newRow = table.insertRow(0);
+
+            let cel1 = newRow.insertCell(0);
+            let cel2 = newRow.insertCell(1);
+
+            cel1.innerHTML = mealName;
+            cel2.innerHTML = calories;
+
+        }
+
+    </script>
+
+</div>
+-->
+
+<!-- to-do -->
+<!--
+<div class="wrapper-to-do">
+    <div class="wrapper-flex-to-do">
+        <div class="to-do-submit-box">
+            <h1>TO-DO LIST</h1>
+        </div>
+        <div class="to-do-submit-box">
+            <p>Plan out what type of workouts you'll do on specific days</p>
+        </div>
+        <div class="to-do-submit-box">
+            <form method="POST" action="{% url 'to-do' %}">
+                {% csrf_token %}
+                {{ form.title }}
+                <button class="btn btn-dark btn-outline-success" type="submit" name="create-task">ADD TASK</button>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper-flex-to-do">
+        <div class="task-log-box">
+            {% if task.complete == True %}
+                <strike class="s">{{ task }}</strike>
+            {% else %}
+                <span>{{ task }}</span>
+            {% endif %}
+                    <a class="btn btn-dark btn-outline-primary" href="#">UPDATE</a>
+                    <a class="btn btn-dark btn-outline-danger" href="#">DELETE</a>
+        </div>
+    </div>
+</div>
+-->
+
+

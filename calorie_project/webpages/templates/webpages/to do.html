@@ -1,0 +1,37 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+<div class="wrapper-to-do">
+    <div class="container-to-do">
+        <div class="add-task-box">
+            <h1>TO-DO LIST</h1>
+        </div>
+        <div class="add-task-box">
+            <p>Plan out what type of workouts you'll do on specific days</p>
+        </div>
+        <div class="add-task-box">
+            <form method="POST" action="{% url 'to-do' %}">
+                {% csrf_token %}
+                {{ form.title }}
+                <button class="ml-3 btn btn-dark btn-outline-success" type="submit" name="create-task">ADD TASK</button>
+            </form>
+        </div>
+    </div>
+    <div class="container-to-do">
+        <div class="to-do-header">
+            {% for task in tasks %}
+                <div class="task-log-box">
+                    {% if task.complete == True %}
+                        <strike class="s">{{ task }}</strike>
+                    {% else %}
+                        <span>{{ task }}</span>
+                    {% endif %}
+                    <a class="btn btn-dark btn-outline-primary" href="{% url 'update-task' task.id %}">UPDATE</a>
+                    <a class="btn btn-dark btn-outline-danger" href="{% url 'delete-task' task.id %}">DELETE</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

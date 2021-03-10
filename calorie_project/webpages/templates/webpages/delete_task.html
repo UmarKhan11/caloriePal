@@ -1,0 +1,22 @@
+{% extends 'webpages/base.html' %}
+{% block content %}
+
+<div class="wrapper-to-do">
+    <div class="container-to-do">
+
+        <div class="confirm-delete-task-flex">
+            <p>Are you sure you want to delete "{{ item }}"</p>
+        </div>
+
+        <div class="confirm-delete-task-flex">
+            <button class="btn btn-dark btn-primary"><a class="text-decoration-none" href="{% url 'to-do' %}">Cancel</a></button>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-dark btn-outline-danger" name="confirm">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
